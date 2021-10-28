@@ -1,0 +1,4 @@
+Matplotlib - vectors with API
+*libiarys
+__init__
+pavucontrol - tool in Fedora to level up the volume up to 150%
