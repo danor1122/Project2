@@ -11,7 +11,6 @@ def wordfile():
     return word
 # wordfile()
 
-# wordfile()
 def difficulty():
     print("Choose level difficulty:\n1. Easy (5 mistakes)\n2. Midium (3 mistakes)\n3. Hard (1 mistake)")
     level = int(input())
@@ -24,20 +23,21 @@ def difficulty():
     else:
         print("You choosen wrong number.")
         difficulty()    
-# word = "kamila"
+
 used_letters = []
 user_words = []
 
-def find_indexes(word, letter):
+def find_indexes(word, letter):  # self indexes moze pomoze
     indexes = [] # zresetowac indexes?
 
     for index, letter_in_word in enumerate(word):
         if letter == letter_in_word:
             indexes.append(index)
+            ## if runned secound time restart function, but how ?
             # k a m i l a # Działa to w ten sposob
             # 0 1 2 3 4 5
 
-    return indexes
+    return indexes 
 
 def show_state_of_game():
     print()
@@ -77,10 +77,16 @@ class main_hangman():
                 print("YEA, This is that word!")
                 if input("Do you want to play again? yes/no: ") == 'yes':
                     user_words.clear()
-                    # used_letters.clear()
-                    used_letters =[]
+                    used_letters.clear()
+                    # used_letters =[]
                     no_of_tries = difficulty()
-                    word_init()                   
+                    word_init()    
+                    find_indexes.
+                    # find_indexes(word, letter) 
+                    # letter =
+                    # find_indexes.__init__()# zresetowac indexes?
+
+
                     # continue
                 else:
                     print("See you next time!")
@@ -92,8 +98,8 @@ class main_hangman():
 ### Gra wyłącza sie na koniec 
 # Własciwa walidacja, co podaje uzytkownik, czy litera, czy nie kilka liter na raz, badz cyfry ( try:)
 # Nie mozna pozwolic uzytkownikowi wpisywac drugi raz tej samej litery
-# Lista słow do odgadniecia zamiast zmiennej words
-# slowa z zewnetrznego API lub pliku
+## Lista słow do odgadniecia zamiast zmiennej words
+## slowa z zewnetrznego API lub pliku
 # jesli slowo bylo w grze nie pozwalamy aby ponownie sie wybralo
 ### restart gry po wylaczeniu czy chcesz zagrac jeszcze raz
 ### sztywna liczba szans, poziomy trudnosci z 3/5 i 1 szansa
